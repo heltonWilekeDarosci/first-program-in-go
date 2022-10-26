@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+import "os"
 
 func main() {
 
@@ -10,9 +11,15 @@ func main() {
 
 	switch command {
 	case 1:
+		fmt.Println("Monitoring...")
 	case 2:
+		fmt.Println("Exhibiting Logs...")
 	case 0:
+		fmt.Println("Exiting...")
+		os.Exit(0)
 	default:
+		fmt.Println("Command unknown")
+		os.Exit(-1) // os.Exit(-1) To tell something went wrong <<---
 	}
 }
 
