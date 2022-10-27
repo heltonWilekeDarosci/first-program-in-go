@@ -1,0 +1,6 @@
+http://random-status-code.herokuapp.com/
+http://www.alura.com.br
+http://www.caellum.com.br
+http://www.g1.com.br
+http://www.gmail.com.br
+http://www.hotmail.com
