@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -81,8 +82,10 @@ func websiteTest(website string) {
 
 	if reply.StatusCode == 200 {
 		fmt.Println("The website:", website, "loaded successfully!")
+		logRegister(website, true)
 	} else {
 		fmt.Println("The website:", website, "is having problems. Status code:", reply.StatusCode)
+		logRegister(website, false)
 	}
 }
 
@@ -107,5 +110,20 @@ func readWebsiteFile() []string {
 		}
 	}
 
+	file.Close()
+
 	return websites
+}
+
+func logRegister(website string, status bool) {
+
+	file, err := os.OpenFile("log.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	file.WriteString(website + " - online: " + strconv.FormatBool(status) + "\n")
+
+	file.Close()
 }
