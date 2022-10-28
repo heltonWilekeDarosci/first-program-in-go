@@ -1,0 +1,6 @@
+28/10/2022 14:39:21 - http://random-status-code.herokuapp.com/ - online: false
+28/10/2022 14:39:22 - http://www.alura.com.br - online: true
+28/10/2022 14:39:22 - http://www.caellum.com.br - online: true
+28/10/2022 14:39:22 - http://www.g1.com.br - online: true
+28/10/2022 14:39:24 - http://www.gmail.com.br - online: true
+28/10/2022 14:39:24 - http://www.hotmail.com - online: true
